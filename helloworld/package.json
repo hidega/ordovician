@@ -1,0 +1,13 @@
+{
+  "name": "@ordovician/helloworld",
+  "version": "1.0.1",
+  "description": "Example Android app",
+  "private": true,
+  "dependencies": {
+  },
+  "license": "Apache-2.0",
+  "files": [
+    "index.js",
+    "src/**"
+  ]
+}
