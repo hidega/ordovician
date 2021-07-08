@@ -3,8 +3,9 @@ var tasks = require('./src')
 var cmd = process.argv[2]
 
 if(Object.keys(tasks).includes(cmd)) {
-  tasks[cmd]().then(() => {
-    console.log('OK')
+  tasks[cmd]().then(result => {
+    result?.msg && console.log(result.msg)
+    console.log('\nOK')
     process.exit(0)
   }).catch(e => {
     console.error('ERROR: ', e)
