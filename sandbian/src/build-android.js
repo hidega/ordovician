@@ -47,6 +47,7 @@ var signTask = p => {
       'sign',
       '--ks', p.keystoreFileName,
       '--ks-pass', 'env:KSPWD',
+      '--min-sdk-version', '30',
       commons.resolvePath(p.distPath, p.apkName + APK)
     ]
     result = execCmd(p.apksignerPath, args, { JAVA_HOME: p.jdkPath, KSPWD: p.keystorePassword })
